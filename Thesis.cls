@@ -149,24 +149,24 @@
 \examiner    {}
 \degree      {}
 \authors     {}
-\university  {\texorpdfstring{\href{University Web Site URL Here (include http://)}
-                {University Name}}
-                {University Name}}
-\UNIVERSITY  {\texorpdfstring{\href{University Web Site URL Here (include http://)}
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
-\department  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {Department or School Name}}
-                {Department or School Name}}
-\DEPARTMENT  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
-\group       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
-                {Research Group Name}}
-                {Research Group Name}}
-\GROUP       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
+\university  {\texorpdfstring{\href{https://www.unifr.ch/home/en/}
+                {UNIVERSITY OF FRIBOURG (SWITZERLAND))}}
+                {UNIVERSITY OF FRIBOURG (SWITZERLAND)}}
+\UNIVERSITY  {\texorpdfstring{\href{https://www.unifr.ch/home/en/)}
+                {UNIVERSITY OF FRIBOURG (SWITZERLAND))}}
+                {UNIVERSITY OF FRIBOURG (SWITZERLAND)}}
+\department  {\texorpdfstring{\href{https://www.unifr.ch/geo/en/}
+                {Department of Geosciences}}
+                {Department of Geosciences}}
+\DEPARTMENT  {\texorpdfstring{\href{https://www.unifr.ch/geo/en/}
+                {Department of Geosciences}}
+                {Department of Geosciences}}
+\group       {\texorpdfstring{\href{https://www.unifr.ch/geo/cryosphere/en/}
+                {Cryosphere Research Group}}
+                {Cryosphere Research Group}}
+\GROUP       {\texorpdfstring{\href{https://www.unifr.ch/geo/cryosphere/en/}
+                {Cryosphere Research Group}}
+                {Cryosphere Research Group}}
 \faculty     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
                 {Faculty Name}}
                 {Faculty Name}}
