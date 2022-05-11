@@ -132,8 +132,11 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 \lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
 \listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
 {
-% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
+\textbf{AIR} & \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{SAIR} & \textbf{S}easonal \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{PAIR} & \textbf{P}erpetual \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{HAIR} & \textbf{H}orizontal \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{VAIR} & \textbf{V}ertical \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
 
 }
 
@@ -177,11 +180,11 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 % Include the chapters of the thesis, as separate files
 % Just uncomment the lines as you write the chapters
 
-% \input{Chapters/Chapter1} % Introduction
+\input{Chapters/Introduction} % Introduction
 
-%\input{Chapters/Chapter2} % Background Theory 
+% \input{Chapters/Literature} % Background Theory
 
-%\input{Chapters/Chapter3} % Experimental Setup
+\input{Chapters/Methods} % Experimental Setup
 
 %\input{Chapters/Chapter4} % Experiment 1
 
@@ -189,7 +192,7 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 %\input{Chapters/Chapter6} % Results and Discussion
 
-\input{Chapters/Chapter5} % Conclusion
+\input{Chapters/Conclusions} % Conclusion
 
 %% ----------------------------------------------------------------
 % Now begin the Appendices, including them as separate files
@@ -211,7 +214,7 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 \label{Bibliography}
 \lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
 \bibliographystyle{unsrtnat}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
-\bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\bibliography{zot_refs}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \end{document}  % The End
 %% ----------------------------------------------------------------
