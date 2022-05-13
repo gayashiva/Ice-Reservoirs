@@ -37,11 +37,20 @@ in Fig. \ref{fig:shape}. $M_{ice}^i$ is the mass of the AIR and $\Delta M_{ice}^
 M_{ice}^{i-2}$. Henceforth, the equations used display the model time step superscript $i$ only if it is different
 from the current time step.
 
+AIR density can be defined as:
+
+\begin{equation}
+  \rho_{cone} = \frac{M_{F} + M_{dep} + M_{ppt}}{(M_{F} + M_{dep})/\rho_{ice} + M_{ppt}/\rho_{snow}}
+\end{equation}
+
+where $M_F$ is the cumulative mass of the fountain discharge; $M_{ppt}$ is the cumulative precipitation;
+$M_{dep}$ is the cumulative accumulation through water vapour deposition; $\rho_{ice}$ is the ice density (917
+$kg\,m^{-3}$) and $\rho_{snow}$ is the density of wet snow (300 $kg\,m^{-3}$) taken from
+\cite{cuffeyPhysicsGlaciers2010} .
+
 AIR volume can also be expressed as:
 
-\begin{equation} V_{cone} =\frac{M_{ice}} {\rho_{ice}} \label{eq:V1} \end{equation}
-
-where $\rho_{ice}$ is the density of ice (917 $kg\, m^{-3}$). 
+\begin{equation} V_{cone} =\frac{M_{ice}} {\rho_{cone}} \label{eq:V1} \end{equation}
 
 The initial radius of the AIR is assumed to be $r_F$. The initial height $h_0$ depends on the dome volume
 $V_{dome}$ used to construct the AIR as follows:
@@ -69,6 +78,8 @@ Icestupa at each time step $i$ can be determined by considering the following ru
 		r_{cone}^{i-1} \geq r_{F} \textit{ and } \Delta M_{ice} > 0                                                     \\ (\frac{3 \cdot M_{ice}}{\pi \cdot \rho_{ice} \cdot s_{cone}})^{1/3} \cdot (1,\,  s_{cone}) &
 		otherwise\end{array} \right.  \label{eq:A2} \end{equation}
 
+
+
 \subsection{Energy balance calculation} \label{sec:energy}
 
 \begin{figure}
@@ -84,15 +95,16 @@ We approximate the energy balance at the surface of an AIR by a one-dimensional 
 into and out of a (thin) layer with thickness $\Delta x$:
 
 \begin{equation}
-	\rho_{ice} \cdot c_{ice} \cdot \frac{\Delta T}{\Delta t} \cdot \Delta x = q_{SW} + q_{LW} + q_{L} + q_{S} + q_{F} + q_{G}
+	\rho_{ice} \cdot c_{ice} \cdot \frac{\Delta T}{\Delta t} \cdot \Delta x = q_{SW} + q_{LW} + q_{L} + q_{S} + q_{F}+ q_{R} + q_{G}
 	\label{eqn:EB}
 \end{equation}
 
-Upward and downward fluxes relative to the ice surface are positive and negative, respectively. The first term is
-the energy change of the surface layer, which can be translated into a phase change energy should phase changes
-occur; $q_{SW}$ is the net shortwave radiation; $q_{LW}$ is the net longwave radiation; $q_{L}$ and $q_{S}$ are
-the turbulent latent and sensible heat fluxes. $q_{F}$ represents the heat exchange of the fountain water
-droplets with the AIR ice surface. $q_{G}$ represents ground heat flux between the AIR surface and its interior.
+Upward and downward fluxes relative to the ice surface are positive and negative, respectively. The first term
+is the energy change of the surface layer, which can be translated into a phase change energy should phase
+changes occur; $q_{SW}$ is the net shortwave radiation; $q_{LW}$ is the net longwave radiation; $q_{L}$ and
+$q_{S}$ are the turbulent latent and sensible heat fluxes. $q_{F}$ and $q_{R}$ represent the heat exchange of
+the fountain water droplets and rain droplets with the AIR ice surface respectively. $q_{G}$ represents ground
+heat flux between the AIR surface and its interior.
 
 The energy flux acts upon the AIR surface layer, which has an upper and lower boundary defined by the
 atmosphere and the ice body of the AIR, respectively.  A sensitivity analysis was later performed
@@ -112,15 +124,16 @@ radiation.
 The albedo varies depending on the water source that formed the current AIR surface layer. During the fountain
 runtime, the albedo assumes a constant value corresponding to ice albedo. However, after the fountain is
 switched off, the albedo can reset to snow albedo during snowfall events and then decay back to ice albedo. We
-use the scheme described in \cite{oerlemansYearRecordGlobal1998} to model this process. The scheme records the decay of
-albedo with time after fresh snow is deposited on the surface. $\delta t$ records the number of time steps after
-the last snowfall event. After snowfall, albedo changes over a time step, $\delta t$ , as
+use the scheme described in \cite{oerlemansYearRecordGlobal1998} to model this process. The scheme records the
+decay of albedo with time after fresh snow is deposited on the surface. $\delta t$ records the number of time
+steps after the last snowfall event. After snowfall, albedo changes over a time step, $\delta t$ , as
 
 \begin{equation} \alpha=\alpha_{ice}+(\alpha_{snow}-\alpha_{ice}) \cdot e^{(-\delta t)/\tau} \label{eqn:a}
 \end{equation}
 
 where $\alpha_{ice}$ is the bare ice albedo value (0.25), $\alpha_{snow}$ is the fresh snow albedo value (0.85)
-and $\tau$ is a decay rate (16 $days$), which determines how fast the albedo of the ageing snow recedes back to ice albedo.
+and $\tau$ is a decay rate (16 $days$), which determines how fast the albedo of the ageing snow recedes back to
+ice albedo. Discharge events decrease the decay rate by a factor of $\alpha_{ice}/\alpha_{snow}$. 
 
 The solar area fraction $f_{cone}$ of the ice structure exposed to the direct shortwave radiation depends on the shape
 considered. Using the solar elevation angle $\theta_{sun}$, the solar beam can be considered to have a vertical
@@ -227,6 +240,17 @@ process is:
 \end{equation}
 
 with $c_{water}$ as the specific heat of water (4186 J $kg^{-1} K^{-1}$).
+
+\subsubsection{Rain heat flux \texorpdfstring{$q_{R}$}{Lg} }
+
+The influence of rain events on the albedo and the energy balance was assumed to be similar to that of discharge
+events. However, the water temperature of a ran event was assumed to equal to the air temeperature. Accordingly,
+the heat flux generated due to a rain event was equal to:
+
+\begin{equation}
+  q_{R} = \frac{ \Delta M_{ppt} \cdot c_{water} \cdot T_a}{\Delta t \cdot A_{cone}}
+	\label{eqn:qF}
+\end{equation}
 
 \subsubsection{Bulk Icestupa heat flux \texorpdfstring{$q_{G}$}{Lg}} \label{sec:Bulkflux}
 
@@ -368,45 +392,6 @@ time step can be calculated using Eqn. \ref{eq:MB}.
 Considering AIRs as water reservoirs, their net water loss can be defined as:
 
 \begin{equation} \textit{Net water losses} = \frac{M_{waste}+M_{sub}}{(M_F+M_{ppt}+M_{dep})} \cdot 100 \end{equation}
-
-\section{Model updates}
-
-The model was made more sensitive to fountain discharge rate feedback in order to compare the volume evolution
-of the automated and the traditional AIRs. This was done by introducing better parametrisation of fountain water
-temperature and surface albedo. 
-
-In the previous version of the model \citep{balasubramanianInfluenceMeteorologicalConditions2022}, the fountain
-water temperature ($T_F$) was estimated as a constant parameter. However, in reality, this is a poor
-approximation. This is because the fountain water temperature and source water temperature differ due to the
-cooling of the water during its transit from the source to the  AIR surface. Therefore, we instead use measured
-hourly ground temperature measurements to approximate water temperature for both the AIRs.
-
-In the previous version of the model \citep{balasubramanianInfluenceMeteorologicalConditions2022}, fountain
-discharge events were reset from surface albedo to ice albedo. However, this assumption limits the accuracy of
-the model, especially, for the automated AIR where several fountain discharge events of short durations occur.
-Therefore, we assumed that discharge events instead increase the albedo decay rate ($\tau$) by a scaling
-factor equal to $\frac{\alpha_{snow}}{\alpha_{ice}}$.
-
-Additionally, both the AIRs experienced many precipitation events. Therefore, it was no longer accurate to
-assume AIR density ($\rho_{AIR}$) to be equal to ice density. We instead parameterised AIR density $\rho_{AIR}$ as follows:
-
-\begin{equation}
-  \rho_{AIR} = \frac{M_{F} + M_{dep} + M_{ppt}}{(M_{F} + M_{dep})/\rho_{ice} + M_{ppt}/\rho_{snow}}
-\end{equation}
-
-where $M_F$ is the cumulative mass of the fountain discharge; $M_{ppt}$ is the cumulative precipitation;
-$M_{dep}$ is the cumulative accumulation through water vapour deposition; $\rho_{ice}$ is the ice density (917
-$kg\,m^{-3}$) and $\rho_{snow}$ is the density of wet snow (300 $kg\,m^{-3}$) taken from
-\cite{cuffeyPhysicsGlaciers2010} .
-
-Rain events were not considered in the previous version of the model but they occur in our experiment. The
-influence of rain events on the albedo and the energy balance was assumed to be similar to that of discharge
-events. However, the water temperature of a rain event was assumed to be equal to the air temperature.
-Accordingly, the heat flux generated due to a rain event was equal to:
-
-\begin{equation}
-  q_{R} = \frac{\Delta M_{ppt} \cdot c_{water} \cdot T_{a}}{\Delta t \cdot A_{cone}}
-\end{equation}
 
 \section{Measurement methodology}
 
