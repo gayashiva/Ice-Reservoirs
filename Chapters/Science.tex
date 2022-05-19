@@ -21,14 +21,14 @@ date.
 
 \subsection{Fountain observations}
 
-The fountain consists of a vertical pipe and a nozzle. The fountain pipe has three attributes, namely :
-discharge rate ($Q$), height ($h$) and water temperature ($T_F$). Discharge rate represents the discharge rate
-of the water in the fountain pipeline. Height denotes the height of the fountain pipeline installed. Fountain
-water temperature is the temperature of water droplets produced by the fountain.
+The fountain consists of a pipeline and a nozzle. The pipeline has three attributes, namely : discharge rate
+($Q$), height ($h$) and water temperature ($T_F$). Discharge rate represents the discharge rate of the water in
+the fountain pipeline. Height denotes the height of the fountain pipeline installed. Fountain water temperature
+is the temperature of water droplets produced by the fountain.
 
-The fountain nozzle has two characteristics, namely : the spray radius ($r$) and pressure loss ($P$) . Spray
-radius denotes the observed ice radius formed from the fountain water droplets. Pressure loss denotes the loss
-of water head caused due to the fountain nozzle.
+The fountain nozzle has three characteristics, namely : the aperture diameter ($dia$), the spray radius ($r$)
+and pressure loss ($P$) . Spray radius denotes the observed ice radius formed from the fountain water droplets.
+Pressure loss denotes the loss of water head caused due to the fountain nozzle.
 
 \subsection{Drone flights}
 
@@ -203,7 +203,7 @@ using the parametrisation proposed by \cite{woolfComputationSolarElevation1968}.
 		f_{cone}& =\frac{(0.5 \cdot r_{cone} \cdot h_{cone}) \cdot cos \theta_{sun} +(\pi \cdot
 			{(r_{cone})}^2/2) \cdot sin \theta_{sun} }{\pi \cdot r_{cone} \cdot ({(r_{cone})}^2+{(h_{cone})}^2)^{1/2}}\\
 	\end{split}
-	\label{eqn:f_{cone}}
+	\label{eqn:f_{cone} }
 \end{equation}
 
 The diffuse shortwave radiation is assumed to impact the conical AIR surface uniformly.
@@ -306,7 +306,7 @@ the heat flux generated due to a rain event was equal to:
 
 \begin{equation}
   q_{R} = \frac{ \Delta M_{ppt} \cdot c_{water} \cdot T_a}{\Delta t \cdot A_{cone}}
-	\label{eqn:qF}
+	\label{eqn:qR}
 \end{equation}
 
 \subsubsection{Bulk Icestupa heat flux \texorpdfstring{$q_{G}$}{Lg}} \label{sec:Bulkflux}
