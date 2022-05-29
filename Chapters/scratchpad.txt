@@ -1,4 +1,7 @@
 
+Modelling is a powerful tool that allows to identify the causes of AIR volume dynamics in space and time.
+However, in-situ observations are required to tie these models to reality.  
+
 In this thesis a one dimensional model has been developed which is used as a tool to investigate the dynamics of
 AIRs.
 
