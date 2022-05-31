@@ -136,11 +136,11 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 
 \input{Chapters/Religion} % Background Theory
 
-\input{Chapters/Technology} % Influence of fountain
-
 \input{Chapters/Science} % Experimental Setup
 
-\input{Chapters/Habitat} % Influence of location
+\input{Chapters/Technology} % Influence of fountain
+
+% \input{Chapters/Habitat} % Influence of location
 
 % \input{Chapters/Design} % Influence of design
 
@@ -148,12 +148,13 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 
 %% ----------------------------------------------------------------
 % Now begin the Appendices, including them as separate files
-
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
+\clearpage  % Start a new page
 \lhead{\emph{Paper I}}  
 \includepdf[pages=-,pagecommand={},width=\paperwidth, offset=75 -75, scale=5]{Chapters/Paper1.pdf}
 
+%% ----------------------------------------------------------------
 \lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
 \listofnomenclature{lll}  % Include a list of Symbols (a three column table)
 {
