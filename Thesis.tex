@@ -10,6 +10,7 @@
 \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
 \usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
 \usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\usepackage{pdfpages}
 \hypersetup{urlcolor=blue, colorlinks=false}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
 %% ----------------------------------------------------------------
@@ -150,6 +151,9 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
+\lhead{\emph{Paper I}}  
+\includepdf[pages=-,pagecommand={},width=\paperwidth, offset=75 -75, scale=5]{Chapters/Paper1.pdf}
+
 \lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
 \listofnomenclature{lll}  % Include a list of Symbols (a three column table)
 {
@@ -175,10 +179,10 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 \listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
 {
 \textbf{AIR} & \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
-\textbf{SAIR} & \textbf{S}easonal \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
-\textbf{PAIR} & \textbf{P}erpetual \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
-\textbf{HAIR} & \textbf{H}orizontal \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
-\textbf{VAIR} & \textbf{V}ertical \textbf{A}rtificial \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{SIR} & \textbf{S}easonal \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{PIR} & \textbf{P}erpetual \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{HIR} & \textbf{H}orizontal \textbf{I}ce \textbf{R}eservoirs \\
+\textbf{VIR} & \textbf{V}ertical \textbf{I}ce \textbf{R}eservoirs \\
 
 }
 

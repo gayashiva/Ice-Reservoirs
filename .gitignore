@@ -12,4 +12,5 @@
 *.aux
 *.sty
 *.synctex
+*.synctex(busy)
 .python*
