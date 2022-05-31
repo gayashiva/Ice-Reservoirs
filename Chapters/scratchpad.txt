@@ -1,4 +1,21 @@
 
+
+
+A spirit of improvisation guides the design and construction of AIRs making it difficult to make a quantitative
+comparison from site to site.
+
+The construction of ice terraces on south-facing slopes is regarded not only as a way to cope with water
+scarcity but also as an adaptation to climate change \citep{norphelArtificialGlacierHigh2009}.
+
+AIRs are engineered systems exploiting gravity and freezing winter temperatures to amass a seasonal stock of
+ice.
+
+Adequate crop production assumes a central role in the lives of mountain farmers, making the availability of
+irrigation water indispensable. The chief components of that resource are meltwater from glaciers and seasonal
+snow cover. However, seasonal melting of glaciers occurs quite late because of the regions's high altitude,
+which delays the availability of glacial meltwater. This seasonal water scarcity makes it essential to provide
+supplementary irrigation in order to take advantage of the complete growing season. 
+
 Modelling is a powerful tool that allows to identify the causes of AIR volume dynamics in space and time.
 However, in-situ observations are required to tie these models to reality.  
 
