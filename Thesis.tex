@@ -138,11 +138,9 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 
 \input{Chapters/Science} % Experimental Setup
 
-\input{Chapters/Technology} % Influence of fountain
+\input{Chapters/Habitat} % Influence of location
 
-% \input{Chapters/Habitat} % Influence of location
-
-% \input{Chapters/Design} % Influence of design
+\input{Chapters/Technology} % Influence of construction strategy
 
 \input{Chapters/Heritage} % Conclusion
 
@@ -151,8 +149,28 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
 \clearpage  % Start a new page
-\lhead{\emph{Paper I}}  
-\includepdf[pages=-,pagecommand={},width=\paperwidth, offset=75 -75, scale=5]{Chapters/Paper1.pdf}
+
+% The Acknowledgements page, for thanking everyone
+\papers{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+The acknowledgements and the people to thank go here, don't forget to include your project advisor\ldots
+
+\lhead{\emph{Paper I}} 
+\includepdf[pages=-,pagecommand={},width=\paperwidth, offset=75 -75, scale=5]{Chapters/PaperI.pdf}
+
+\clearpage  % Start a new page
+\lhead{\emph{Paper II}} 
+\includepdf[pages=-,pagecommand={},width=\paperwidth, offset=75 -75, scale=5]{Chapters/PaperII.pdf}
+
+}
+\clearpage  % End of the Acknowledgements
+% \lhead{\emph{Paper I}}  
+% \includepdf[pages=-,pagecommand={},width=\paperwidth, offset=75 -75, scale=5]{Chapters/PaperI.pdf}
+
+% \clearpage  % Start a new page
+% \lhead{\emph{Paper II}}  
+% \includepdf[pages=-,pagecommand={},width=\paperwidth, offset=75 -75, scale=5]{Chapters/PaperII.pdf}
 
 %% ----------------------------------------------------------------
 \lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"

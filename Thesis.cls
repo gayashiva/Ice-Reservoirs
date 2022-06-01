@@ -337,6 +337,15 @@
 \begin{longtable}[c]{#1}#2\end{longtable}\par
     \cleardoublepage
 }
+\newcommand\papers[1]{
+\btypeout{Papers}
+\addtotoc{Papers}
+\thispagestyle{plain}
+\begin{center}{\huge{\textit{Papers}} \par}\end{center}
+{\normalsize #1}
+\vfil\vfil\null
+
+}
 \newcommand\listnomenclature{Symbols}
 \usepackage{longtable}
 \newcommand\listofnomenclature[2]{

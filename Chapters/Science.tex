@@ -4,33 +4,13 @@ This chapter provides the methodology used to estimate the ice volume evolution 
 AIRs. The equations governing the mass and energy balance of vertical AIRs (or Icestupas) is explained along
 with the associated datasets required for forcing, calibration and validation of this AIR model.
 
-\section{Measurement methodology}
 
 The influence of the chosen location and fountain used was quantified by feeding weather and fountain data to an
 energy balance model and validating the ice volume estimates produced with volume observations from drone
 flights. Therefore, weather observations and fountain characteristics were required to force the AIR model and
 ice volume observations were required to calibrate and validate the model. 
 
-\subsection{Meteorological data}
-
-Air temperature, relative humidity, wind speed, pressure, longwave and global shortwave radiation are required
-to calculate the surface energy balance of an AIR. The study period starts when the fountain was forst switched
-on and ends when the respective AIR melted completely. These two dates are denoted as start and expiry dates
-henceforth. Each AIR is abbreviated based on the country code of the study site with the year of its expiry
-date.
-
-\subsection{Fountain observations}
-
-The fountain consists of a pipeline and a nozzle. The pipeline has three attributes, namely : discharge rate
-($Q$), height ($h$) and water temperature ($T_F$). Discharge rate represents the discharge rate of the water in
-the fountain pipeline. Height denotes the height of the fountain pipeline installed. Fountain water temperature
-is the temperature of water droplets produced by the fountain.
-
-The fountain nozzle has three characteristics, namely : the aperture diameter ($dia$), the spray radius ($r$)
-and pressure loss ($P$) . Spray radius denotes the observed ice radius formed from the fountain water droplets.
-Pressure loss denotes the loss of water head caused due to the fountain nozzle.
-
-\subsection{Drone flights}
+\section{Study sites and data}
 
 \subsection{Study sites}
 
@@ -57,7 +37,28 @@ between July and September reaches 37.5 $mm$, the average winter precipitation b
 to 27.3 $ mm$ and falls almost entirely as snow. AIRs were constructed here as part of the Ice Stupa Competition
 by the Himalayan Institute of Alternatives, Ladakh (HIAL). 
 
-\section{Modelling methodology}
+\subsection{Meteorological data}
+
+Air temperature, relative humidity, wind speed, pressure, longwave and global shortwave radiation are required
+to calculate the surface energy balance of an AIR. The study period starts when the fountain was forst switched
+on and ends when the respective AIR melted completely. These two dates are denoted as start and expiry dates
+henceforth. Each AIR is abbreviated based on the country code of the study site with the year of its expiry
+date.
+
+\subsection{Fountain observations}
+
+The fountain consists of a pipeline and a nozzle. The pipeline has three attributes, namely : discharge rate
+($Q$), height ($h$) and water temperature ($T_F$). Discharge rate represents the discharge rate of the water in
+the fountain pipeline. Height denotes the height of the fountain pipeline installed. Fountain water temperature
+is the temperature of water droplets produced by the fountain.
+
+The fountain nozzle has three characteristics, namely : the aperture diameter ($dia$), the spray radius ($r$)
+and pressure loss ($P$) . Spray radius denotes the observed ice radius formed from the fountain water droplets.
+Pressure loss denotes the loss of water head caused due to the fountain nozzle.
+
+\subsection{Drone flights}
+
+\section{AIR Model}
 
 A bulk energy and mass balance model is used to calculate the amounts of ice, meltwater, water vapour and
 wastewater of the AIR. In each hourly time step, the model uses the AIR surface area, energy balance and mass
@@ -449,6 +450,26 @@ time step can be calculated using Eqn. \ref{eq:MB}.
 Considering AIRs as water reservoirs, their net water loss can be defined as:
 
 \begin{equation} \textit{Net water losses} = \frac{M_{waste}+M_{sub}}{(M_F+M_{ppt}+M_{dep})} \cdot 100 \end{equation}
+
+
+\section{Cosistupa model}
+
+\section{Suggestions for future measurement campaigns}
+
+\subsection{Further Data acquisition}
+
+\subsubsection{Measurement of meltwater quantities}
+
+\subsubsection{Measurement of fountain characteristics}
+
+\subsubsection{Drone flight analysis}
+
+\subsection{Improvement of model algorithm}
+
+\subsubsection{Initialisation of model}
+
+\subsubsection{Better model parametrisations}
+
 
 
 
