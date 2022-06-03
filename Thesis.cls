@@ -341,7 +341,7 @@
 \btypeout{Papers}
 \addtotoc{Papers}
 \thispagestyle{plain}
-\begin{center}{\huge{\textit{Papers}} \par}\end{center}
+\huge{Paper I}
 {\normalsize #1}
 \vfil\vfil\null
 

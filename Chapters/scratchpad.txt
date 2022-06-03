@@ -1,3 +1,6 @@
+The compilation of these novel and
+comprehensive data sets and main results about the meteorological influences are described and discussed in
+Paper II.
 
 One approach to determine the freezing energy
 balance of this location could be used as a metric to define where AIRs have utility as a water storage
