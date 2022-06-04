@@ -2,31 +2,6 @@
 
 \section{Introduction}
 
-For centuries, in the Himalayan mountain ranges, local cultures have believed that glaciers are alive. And
-what’s more, that certain glaciers can have different genders including male and female. These people ‘breed’
-new glaciers by grafting together—or marrying—fragments of ice from male and female glaciers, then covering them
-with charcoal, wheat husks, cloths, or willow branches so they can reproduce in privacy. These glacierets
-transform into fully active glaciers that grow each year with additional snowfall. Those then serve as lasting
-reserves of water that farmers can use to irrigate their crops. Over the years, these practices have inspired
-other cultures, where people are creating their own artificial ice reservoirs (AIRs) and applying them to solve
-serious modern challenges around water supplies.
-
-Take Ladakh, a high-altitude desert region in northern India. It sits in the rain shadow of the Himalayas and
-receives on average fewer than ten centimeters of rain/snow per year. As local glaciers shrink because of
-climate change, regional water scarcity is increasing. And so, local farmers have started growing their own ice
-reservoirs as insurance against this uncertainty. 
-
-Due to low temperatures and high variability of seasonal snow cover
-\citep{mukhopadhyayReevaluationSnowmeltGlacial2015}, there is a shortage of water at the onset of the
-agricultural season for about two months until a sufficient and reliable supply of meltwater from high altitude
-glaciers becomes available. 
-
-AIR serve to bridge this gap in water availability by providing meltwater earlier in the agricultural season.
-AIRs do so by exploiting gravity and freezing winter temperatures to amass a seasonal stock of ice. Many types
-of AIRs exist. In the past these were built as horizontal ice sheets much higher up the mountains, making them
-difficult to manage. Now, as ice cones, they are built next to where the water is needed most, right on the
-outskirts of villages, near their fields.
-
 \begin{figure}[t]
 \centering
 \includegraphics[width=12cm]{Figures/irrigation_cycles.png}
@@ -37,31 +12,53 @@ AIRs in bridging the phase of water scarcity in spring. Adapted from: \cite{nuss
 \label{fig:irrigation_cycles}
 \end{figure}
 
-While much has been written about the promise of AIRs for irrigation water supply, very little data exists to
-support these claims. Published quantifications of their water storage capacity differs between 17,000 and 23500
-$m^3$ \citep{norphelSnowWaterHarvesting2015, baglaArtificialGlaciersHelp1998}. Recent research has called for an
-examination of their long-term efficacy and their usefulness as climate change adaptation strategies
-\citep{clouseLadakhArtificialGlaciers2017}. 
+Cryosphere-fed irrigation networks in arid mountain regions are completely dependent on timely availability of
+meltwater from glaciers, snow and permafrost \citep{immerzeelImportanceVulnerabilityWorld2020,
+farhanHydrologicalRegimesConjunction2015, tveitenGlacierGrowingLocal2007}. With the accelerated decline of
+glaciers due to climate change \citep{nusserLocalKnowledgeGlobal2016}, these regions are experiencing water
+scarcity particularly during the spring season \citep{norphelSnowWaterHarvesting2015,
+mukhopadhyayReevaluationSnowmeltGlacial2015} (see Fig. \ref{fig:irrigation_cycles}). This seasonal water
+scarcity makes it essential to provide supplementary irrigation in order to sustain agricultural output and take
+advantage of the complete growing season \citep{nusserLocalKnowledgeGlobal2016, vincentEnergyClimateChange2009}.
 
-We attempt to address this gap through a measurement campaign of AIRs built in India and Switzerland. This
-campaign used drones, flowmeters and weather stations to create a calibration and validation dataset for a mass
-and energy balance model. The parameters of the model were calibrated and its ice volume evolution were
-validated using this dataset to produced the AIR model. 
+To cope with this recurrent water scarcity, villagers in the region of Ladakh have developed two types of
+artificial ice reservoirs (AIRs): ice stupas and ice terraces.  All these types of ice reservoirs capture water
+in the autumn and winter, allowing it to freeze, and hold it until spring, when it melts and flows down to
+fields \citep{ipccChapterHighMountain2019, vinceGlacierMan2009, clouseLadakhArtificialGlaciers2017,
+nusserSociohydrologyArtificialGlaciers2019}. In this way, they retain a previously unused portion of the annual
+flow and facilitate its use to supplement the decreased flow in the following spring (see Fig.
+\ref{fig:irrigation_cycles}). This study focuses on the form of AIRs locally called as ice stupas.
 
-The influence of meteorological conditions on AIR water-use efficiency and maximum volume was quantified by
-comparing the modelled volume evolution of Indian AIRs and Swiss AIRs.
+Over the past decade, several ice stupas have been built to supplement irrigation water supply of mountain
+villages in India \citep{wangchukIceStupaCompetition2020, palmerStoringFrozenWater2022,
+aggarwalAdaptationClimateChange2021}, Kyrgyzstan \citep{bbcnewsBrightArtificialGlacier2020} and Chile
+\citep{reutersConservationistsChileAim2021}. Despite this widespread adoption, only a few publications examine
+the role of AIRs in the water resource management of these regions. None of these publications study AIRs
+outside Ladakh. Moreover, the published quantifications of the water storage capacity of AIRs just in Ladakh
+also vary widely between these studies \citep{norphelSnowWaterHarvesting2015, baglaArtificialGlaciersHelp1998}.
+This thesis is a contribution to close this knowledge gap.
 
-The influence of the fountain characteristics on AIR water-use efficiency and maximum volume was quantified by
-comparing the modelled volume evolution of AIRs produced with different fountain designs and scheduling
-strategies.
+Quantifying the water storage capacity of AIRs is not straightforward. It requires an understanding of the
+response of these AIRs both to meteorological conditions and construction strategies used. Since AIRs are ice
+structures with similar surface processes like glaciers, glacier models could be used to quantify meteorological
+influences. However, due to their limited size, and comparatively more variable surface area, this assessment
+requires a modelling approach which is optimally constrained with comprehensive data from in-situ field
+measurements. Moreover, a spirit of improvisation guides the design and construction of AIRs making it difficult
+to make quantitative comparison from site to site. Therefore, the influence of the different construction
+strategies used also have to be captured in this modelling approach. 
 
-\section{State of knowledge}
+This thesis fulfills these requirements as it provides a new set of AIR-specific volume and area measurements
+from drone flights along with meteorological data during the construction period. All these datasets were
+produced through construction strategies using fountain systems that are quantified via in-situ observations of
+the fountain characteristics and discharge rate measurements. This thesis also provides a one-dimensional AIR
+model which is calibrated and validated with several AIR datasets from locations with different meteorological
+conditions and different fountain systems.
+
 
 \section{Objectives}
 
 The main objective of this thesis is to quantify the water storage potential of AIRs based on the construction
 site and fountain chosen. 
-
 
 An integrated study approach including field measurements and modelling is applied to
 answer the following research questions: 
@@ -70,7 +67,7 @@ answer the following research questions:
 
 \item What is the influence of construction location and fountain characteristics on AIR volume evolution? 
 
-\item How can fountain systems be engineered to reduce water loss and maintenance of AIRs?
+\item How can ice stupa fountain systems be engineered to reduce water loss and maintenance of AIRs?
 
 \end{itemize}
 
@@ -83,7 +80,7 @@ conditions (paper II).
 A weather-sensitive construction strategy was developed to answer the second research question. This
 construction strategy employed fountains whose discharge rate was regulated by automation system using the AIR
 model developed before. This weather-sensitive construction strategy was compared with the traditional
-construction strategy to quantify its advantages and disavantages (paper III).
+construction strategy to quantify its advantages and disadvantages (paper III).
 
 \section{Structure}
 
@@ -91,8 +88,8 @@ Chapter 1 introduces the motivation of this work and provides a summary of the s
 prior to this thesis. Chapter 2 describes the origins of this technology as a religious practice. Chapter 3
 gives an overview about the study sites and introduces the different field techniques applied. The influence of
 the construction location through its meteorological and topographical conditions are presented in Chapter 4.
-The enginnering design of AIR technologies are showcased in Chapter 5 along with suggestions for their
-improvement. Capter 6 concludes the thesis with a synthesis and future outlook. Papers I, II and III are
+The engineering design of AIR technologies are showcased in Chapter 5 along with suggestions for their
+improvement. Chapter 6 concludes the thesis with a synthesis and future outlook. Papers I, II and III are
 included in the Appendix.
 
 

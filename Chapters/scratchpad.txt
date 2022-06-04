@@ -1,10 +1,52 @@
-The compilation of these novel and
-comprehensive data sets and main results about the meteorological influences are described and discussed in
-Paper II.
+AIRs are thus an important tool for water resource management particularly of cryosphere-fed irrigation systems.
+However, their long-term efficacy and their usefulness as climate change adaptation strategies remains unknown
+\citep{clouseLadakhArtificialGlaciers2017}. Therefore, quantifications of their water storage need to account
+for the meteorological conditions present and construction methodologies used during AIR construction.
 
-One approach to determine the freezing energy
-balance of this location could be used as a metric to define where AIRs have utility as a water storage
-technology.
+While much has been written about the promise of AIRs for irrigation water supply, very little data exists to
+support these claims. 
+
+We attempt to address this gap through a measurement campaign of AIRs built in India and Switzerland. This
+campaign used drones, flowmeters and weather stations to create a calibration and validation dataset for a mass
+and energy balance model. 
+
+The influence of meteorological conditions on AIR water-use efficiency and maximum volume was quantified by
+comparing the modelled volume evolution of Indian AIRs and Swiss AIRs.
+
+The influence of the fountain characteristics on AIR water-use efficiency and maximum volume was quantified by
+comparing the modelled volume evolution of AIRs produced with different fountain designs and scheduling
+strategies.
+
+AIR serve to bridge this gap in water availability by providing meltwater earlier in the agricultural season.
+AIRs do so by exploiting gravity and freezing winter temperatures to amass a seasonal stock of ice. Many types
+of AIRs exist. In the past these were built as horizontal ice sheets much higher up the mountains, making them
+difficult to manage. Now, as ice cones, they are built next to where the water is needed most, right on the
+outskirts of villages, near their fields.
+
+Due to low temperatures and high variability of seasonal snow cover
+\citep{mukhopadhyayReevaluationSnowmeltGlacial2015}, there is a shortage of water at the onset of the
+agricultural season for about two months until a sufficient and reliable supply of meltwater from high altitude
+glaciers becomes available. 
+
+For centuries, in the Himalayan mountain ranges, local cultures have believed that glaciers are alive. And
+what’s more, that certain glaciers can have different genders including male and female. These people ‘breed’
+new glaciers by grafting together—or marrying—fragments of ice from male and female glaciers, then covering them
+with charcoal, wheat husks, cloths, or willow branches so they can reproduce in privacy. These glacierets
+transform into fully active glaciers that grow each year with additional snowfall. Those then serve as lasting
+reserves of water that farmers can use to irrigate their crops. Over the years, these practices have inspired
+other cultures, where people are creating their own artificial ice reservoirs (AIRs) and applying them to solve
+serious modern challenges around water supplies.
+
+Take Ladakh, a high-altitude desert region in northern India. It sits in the rain shadow of the Himalayas and
+receives on average fewer than ten centimeters of rain/snow per year. As local glaciers shrink because of
+climate change, regional water scarcity is increasing. And so, local farmers have started growing their own ice
+reservoirs as insurance against this uncertainty. 
+
+The compilation of these novel and comprehensive data sets and main results about the meteorological influences
+are described and discussed in Paper II.
+
+One approach to determine the freezing energy balance of this location could be used as a metric to define where
+AIRs have utility as a water storage technology.
 
 AIRs are engineered systems exploiting gravity and freezing winter temperatures to amass a seasonal stock of
 ice. 
@@ -12,6 +54,9 @@ ice.
 These AIRs are constructed as close to the villages as possible. Being at a lower altitude than the natural
 glaciers, AIRS begin melting in April, providing irrigation just in time for the start of the agricultural
 season.
+
+Recent research has called for an examination of their long-term efficacy and their usefulness as climate change
+adaptation strategies \citep{clouseLadakhArtificialGlaciers2017}. 
 
 A spirit of improvisation guides the design and construction of AIRs making it difficult to make a quantitative
 comparison from site to site.
