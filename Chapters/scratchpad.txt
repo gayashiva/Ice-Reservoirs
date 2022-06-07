@@ -1,3 +1,13 @@
+
+
+However, the topography requirements are sensitive to the form of AIRs used. The ice stupa form of AIRs are less
+sensitive to solar radiation and therefore can exist in lower altitudes and non-shadowed zones compared to the
+ice terrace form of AIRs. 
+
+It is pointless to use lakes as water sources unless there is utility in draining and converting them to ice
+structures. This is the case for glacial lakes which can be drained to prevent flash floods while using the
+water supply to harvest ice structures.
+
 AIRs are thus an important tool for water resource management particularly of cryosphere-fed irrigation systems.
 However, their long-term efficacy and their usefulness as climate change adaptation strategies remains unknown
 \citep{clouseLadakhArtificialGlaciers2017}. Therefore, quantifications of their water storage need to account
