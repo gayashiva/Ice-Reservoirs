@@ -150,8 +150,8 @@
 \degree      {}
 \authors     {}
 \university  {\texorpdfstring{\href{https://www.unifr.ch/home/en/}
-                {UNIVERSITY OF FRIBOURG (SWITZERLAND))}}
-                {UNIVERSITY OF FRIBOURG (SWITZERLAND)}}
+                {University Of Fribourg (Switzerland)}}
+                {University Of Fribourg (Switzerland)}}
 \UNIVERSITY  {\texorpdfstring{\href{https://www.unifr.ch/home/en/)}
                 {UNIVERSITY OF FRIBOURG (SWITZERLAND))}}
                 {UNIVERSITY OF FRIBOURG (SWITZERLAND)}}
@@ -159,20 +159,20 @@
                 {Department of Geosciences}}
                 {Department of Geosciences}}
 \DEPARTMENT  {\texorpdfstring{\href{https://www.unifr.ch/geo/en/}
-                {Department of Geosciences}}
-                {Department of Geosciences}}
+                {DEPARTMENT OF GEOSCIENCES}}
+                {DEPARTMENT OF GEOSCIENCES}}
 \group       {\texorpdfstring{\href{https://www.unifr.ch/geo/cryosphere/en/}
                 {Cryosphere Research Group}}
                 {Cryosphere Research Group}}
 \GROUP       {\texorpdfstring{\href{https://www.unifr.ch/geo/cryosphere/en/}
-                {Cryosphere Research Group}}
-                {Cryosphere Research Group}}
+                {CRYOSPHERE RESEARCH GROUP}}
+                {CRYOSPHERE RESEARCH GROUP}}
 \faculty     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
                 {Faculty Name}}
                 {Faculty Name}}
 \FACULTY     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
-                {FACULTY NAME (IN BLOCK CAPITALS)}}
-                {FACULTY NAME (IN BLOCK CAPITALS)}}
+                {FACULTY NAME }}
+                {FACULTY NAME }}
 \addresses   {}
 \subject     {}
 \keywords    {}
@@ -205,7 +205,7 @@
       \bigskip
       \bigskip
       {\large in the \par}
-      {\large \facname \par}
+      % {\large \facname \par}
       {\large \deptname \par}
       \bigskip
       \bigskip

@@ -1,4 +1,20 @@
 
+\subsection{Minimum requirements}
+
+Our results have shown that Swiss AIRs cannot function as water reservoirs due to their small size and short
+survival duration. Therefore, construction of AIRs should not be carried out in locations with meteorological
+conditions less favourable than the Swiss site.
+
+It is not straightforward to compare the meteorological conditions between two sites. A proper comparison
+requires the complete set of meteorological variables described in Section ?. In order to circumvent this, we
+introduce a new metric that serves as an indicator of the water storage potential of any new site.
+
+However, one indicator of the AIR water storage potential of any new site is the number of subzero hours
+annually weighted by 
+
+Another way to locate favourable regions is through occurence of aufeis fields
+
+Naturally occuring aufeis fields and glaciers serve as a good indicator of where ice reservoirs can be made.
 
 However, the topography requirements are sensitive to the form of AIRs used. The ice stupa form of AIRs are less
 sensitive to solar radiation and therefore can exist in lower altitudes and non-shadowed zones compared to the
