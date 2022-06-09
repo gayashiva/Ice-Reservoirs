@@ -1,4 +1,20 @@
 
+
+A spirit of improvisation guides the design and construction of AIRs making it difficult to make a quantitative
+comparison from site to site.  A holistic approach is required which uses the topographical conditions and water
+demands of the construction site to choose the appropriate construction methodology and form of ice reservoir to
+be produced.
+
+There are also villages that still rely
+on ice terraces for their water supply. [Other
+publications](https://link.springer.com/article/10.1007/s10113-018-1372-0/tables/1) estimate that these
+alternative construction strategies can store **30 times** more water than ice stupas. However, none of these
+alternative construction strategies have been explored to date. Moreover, these alternative strategies remain
+unoptimised further limiting their true potential.   
+
+It requires an understanding of the
+response of these AIRs both to meteorological conditions and construction strategies used.
+
 \subsection{Minimum requirements}
 
 Our results have shown that Swiss AIRs cannot function as water reservoirs due to their small size and short
