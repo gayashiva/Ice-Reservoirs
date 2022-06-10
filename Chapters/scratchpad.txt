@@ -1,5 +1,23 @@
 
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=12cm]{Figures/AIR_forms.jpg}
+
+\caption{(a) Schematic overview of the position of artificial ice reservoirs. These constructions are located at
+  altitudes between the glaciers and the irrigation networks in the cultivated areas. (b) Horizontal ice
+  reservoirs at 3900 m, located above the village of Nang, Ladakh. The cascade is composed of a series of loose
+  masonry walls ranging in height from 2 to 3 $m$, which help freeze water for storage. (c) Vertical ice
+reservoirs at 3600 m, located above the village of Phyang, Ladakh. They are made using fountain systems. Adapted
+from: \cite{nusserLocalKnowledgeGlobal2016}}
+
+\label{fig:AIRforms}
+\end{figure}
+
+These structures were built on south-facing slopes as a cascading series of rock walls in the river beds to
+reduce runoff velocity and guide meltwater into shadowed areas . The resulting
+shallow pools begin to freeze as temperatures drop in winter, and ice accumulates. 
+
 A spirit of improvisation guides the design and construction of AIRs making it difficult to make a quantitative
 comparison from site to site.  A holistic approach is required which uses the topographical conditions and water
 demands of the construction site to choose the appropriate construction methodology and form of ice reservoir to
