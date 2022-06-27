@@ -153,21 +153,31 @@ We approximate the energy balance at the surface of an AIR by a one-dimensional 
 into and out of a (thin) layer with thickness $\Delta x$:
 
 \begin{equation}
-	\rho_{ice} \cdot c_{ice} \cdot \frac{\Delta T}{\Delta t} \cdot \Delta x = q_{SW} + q_{LW} + q_{L} + q_{S} + q_{F}+ q_{R} + q_{G}
+  \rho_{cone} \cdot c_{ice} \cdot \frac{\Delta T}{\Delta t} \cdot \Delta x = q_{SW} + q_{LW} + q_{L} + q_{S} + q_{F}+ q_{R} + q_{G}
 	\label{eqn:EB}
 \end{equation}
 
 Upward and downward fluxes relative to the ice surface are positive and negative, respectively. The first term
 is the energy change of the surface layer, which can be translated into a phase change energy should phase
-changes occur; $q_{SW}$ is the net shortwave radiation; $q_{LW}$ is the net longwave radiation; $q_{L}$ and
+changes occur. $q_{SW}$ is the net shortwave radiation; $q_{LW}$ is the net longwave radiation; $q_{L}$ and
 $q_{S}$ are the turbulent latent and sensible heat fluxes. $q_{F}$ and $q_{R}$ represent the heat exchange of
 the fountain water droplets and rain droplets with the AIR ice surface respectively. $q_{G}$ represents ground
 heat flux between the AIR surface and its interior.
 
-The energy flux acts upon the AIR surface layer, which has an upper and lower boundary defined by the
-atmosphere and the ice body of the AIR, respectively.  A sensitivity analysis was later performed
-to understand the influence of this factor and decide its value. Here, we define the surface temperature
-$T_{ice}$ to be the modelled average temperature of the icestupa surface layer.
+The density of the AIR $\rho_{cone}$ was parameterised as follows:
+
+\begin{equation}
+  \rho_{cone} = \frac{M_{F} + M_{dep} + M_{ppt}}{(M_{F} + M_{dep})/\rho_{ice} + M_{ppt}/\rho_{snow}}
+\end{equation}
+
+where $M_F$ is the cumulative mass of the fountain discharge; $M_{ppt}$ is the cumulative precipitation;
+$M_{dep}$ is the cumulative accumulation through water vapour deposition; $\rho_{ice}$ is the ice density (917
+$kg\,m^{-3}$) and $\rho_{snow}$ is the density of wet snow (300 $kg\,m^{-3}$) taken from
+\cite{cuffeyPhysicsGlaciers2010} .
+
+The energy flux acts upon the AIR surface layer, which has an upper and lower boundary defined by the atmosphere
+and the ice body of the AIR, respectively. Here, we define the surface temperature $T_{ice}$ to be the modelled
+average temperature of the icestupa surface layer.
 
 \subsubsection{Net Shortwave Radiation \texorpdfstring{$q_{SW}$}{Lg}} \label{sec:SW}
 
@@ -263,10 +273,10 @@ proposed by \cite{garrattAtmosphericBoundaryLayer1992}:
 where $h_{AWS}$ is the measurement height above the ground surface of the AWS (around $2\,m$ for all sites),
 $v_a$ is the wind speed in [$m\,s^{-1}$], $c_a$ is the specific heat of air at constant pressure (1010 J
 $kg^{-1} K^{-1}$), $\rho_{a}$ is the air density at standard sea level (1.29 $kg m^{-3}$), $p_{0,a}$ is the air
-pressure at standard sea level (1013 $hPa$), $p_{a}$ is the measured air pressure, $\kappa$ is the von Karman constant (0.4), $z_{0}$ is the surface
-roughness (3 $mm$) and $L_s$ is the heat of sublimation (2848 $kJ\,kg^{-1}$).  The vapor pressure of air with
-respect to water ($p_{v,w}$) and with respect to ice ($p_{v,ice}$) was obtained using the formulation given in
-\cite{huangSimpleAccurateFormula2018} :
+pressure at standard sea level (1013 $hPa$), $p_{a}$ is the measured air pressure, $\kappa$ is the von Karman
+constant (0.4), $z_{0}$ is the surface roughness (3 $mm$) and $L_s$ is the heat of sublimation (2848
+$kJ\,kg^{-1}$).  The vapor pressure of air with respect to water ($p_{v,w}$) and with respect to ice
+($p_{v,ice}$) was obtained using the formulation given in \cite{huangSimpleAccurateFormula2018} :
 
 \begin{equation}
 	\begin{split}
@@ -277,7 +287,8 @@ respect to water ($p_{v,w}$) and with respect to ice ($p_{v,ice}$) was obtained 
 
 The dimensionless parameter $\mu_{cone}$ is an exposure parameter that deals with the fact that AIR has a rough
 appearance and forms an obstacle to the wind regime. This factor accounts for the larger turbulent fluxes due to
-the roughness of the surface \citep{oerlemansBriefCommunicationGrowth2021}, and is a function of the AIR slope as follows:
+the roughness of the surface \citep{oerlemansBriefCommunicationGrowth2021}, and is a function of the AIR slope
+as follows:
 
 \begin{equation}
 	\mu_{cone} = 1 + \frac{s_{cone}}{2}
@@ -287,14 +298,17 @@ A possible source of error is the fact that wind measurements from the horizonta
 which might be different from those on a slope. However, without detailed datasets from the AIR surface, we
 retain this assumption.
 
-\subsubsection{Fountain discharge heat flux \texorpdfstring{$q_{F}$}{Lg} }
+\subsubsection{Fountain discharge heat flux \texorpdfstring{$q_{F}$}{Lg} } \label{sec:heatflux}
 
-The fountain water, at temperature $T_F$, is assumed to cool to 0 $\degree C$. Thus, the heat flux caused by this
-process is:
+The fountain water temperature $T_F$ is assumed to cool to 0 $\degree C$ after contact with the ice surface.
+$T_F$ is equal to the measured source water temperature. But during time periods when the ambient temperature is
+subzero, $T_F$ is assumed to be 0 $\degree C$. Thus, the heat flux caused by this process is:
 
 \begin{equation}
-	q_{F} = \frac{ \Delta M_F \cdot c_{water} \cdot T_F}{\Delta t \cdot A_{cone}}
-	\label{eqn:qF}
+	q_{F} = \left\{ \begin{array}{ll}
+		\frac{ \Delta M_F \cdot c_{water} \cdot T_F}{\Delta t \cdot A_{cone}} & \textit{ if } T_{temp} > 0 \\
+		0   & \textit{ otherwise}
+	\end{array} \right.
 \end{equation}
 
 with $c_{water}$ as the specific heat of water (4186 J $kg^{-1} K^{-1}$).
@@ -302,7 +316,7 @@ with $c_{water}$ as the specific heat of water (4186 J $kg^{-1} K^{-1}$).
 \subsubsection{Rain heat flux \texorpdfstring{$q_{R}$}{Lg} }
 
 The influence of rain events on the albedo and the energy balance was assumed to be similar to that of discharge
-events. However, the water temperature of a ran event was assumed to equal to the air temeperature. Accordingly,
+events. However, the water temperature of a rain event was assumed to equal to the air temeperature. Accordingly,
 the heat flux generated due to a rain event was equal to:
 
 \begin{equation}
@@ -330,7 +344,7 @@ body is near the base of the fountain. Thus, the distance of every point in the 
 body's center of mass is between $h_{cone}$ and $r_{cone}$. Therefore, we calculate $q_{G}$ assuming $l_{cone} = (r_{cone} +
 	h_{cone})/2$.
 
-\subsubsection{Phase changes}
+\subsubsection{Phase changes}\label{sec:phase}
 
 In this section, the numerical procedures to model phase changes at the surface layer are explained. Let
 $T_{temp}$ be the calculated surface temperature. Therefore, Eqn. \ref{eqn:EB} can be rewritten as:
@@ -452,15 +466,122 @@ Considering AIRs as water reservoirs, their net water loss can be defined as:
 \begin{equation} \textit{Net water losses} = \frac{M_{waste}+M_{sub}}{(M_F+M_{ppt}+M_{dep})} \cdot 100 \end{equation}
 
 
-\section{Cosistupa model}
+\section{Model extensions}
 
-\section{Suggestions for future measurement campaigns}
+The AIR model presented above was extended in order to (a) recommend fountain scheduling strategies and (b)
+improve its transferability to new locations.
+
+\subsection{Discharge rate scheduler}
+
+In this section, we focus on the description of the integration of fountain scheduling processes in the model.
+
+Two types of fountain scheduling strategies are possible depending on the contraints of water supply and
+favourable weather window in the respective location. Locations constrained by their available water supply
+require water-sensitive fountain scheduling strategies and those constrained by the duration of favourable
+weather windows require weather-sensitive fountain scheduling strategies. These two kinds of scheduled fountains
+will be referred to as water-sensitive fountain and weather-sensitive fountain henceforth.
+
+Water-sensitive fountains are expected to produce higher water use effiency whereas weather-sensitive fountains
+are expected to produce higher ice volumes. Accordingly, we produce the discharge rate recommendations for these
+two kinds of fountains through two sets of model forcing assumptions for the following three model variables:
+(a) slope , (b) albedo and (c) cloudiness.  These two kinds of models will be referred to as ice volume
+optimised model (IVOM) and water-use efficiency optimised model (WEOM) respectively. The slope variable
+increases the shortwave radiation and sensible heat impact. The albedo variable decreases the shortwave
+radiation impact. The cloudiness variable increases both the shortwave and the longwave radiation impact. We
+associate the upper and lower bounds of these variables with the IVOM and WEOM versions depending on whether
+they overestimate and underestimate the freezing rate of the AIR as shown in Table \ref{tab:assumptions}.
+
+\begin{table}[]
+\centering
+\caption{Assumptions for the parametrisation introduced to simplify the model.}
+\label{tab:assumptions}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Estimation of} & \textbf{Symbol} & \textbf{IVOM} & \textbf{WEOM} & \\ \midrule
+\multicolumn{1}{|l}{Slope}        & $s_{cone}$ & $ 1 $ & $0$ & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l}{Albedo} & $\alpha$ & $\alpha_{snow}$ & $\alpha_{ice}$ & \multicolumn{1}{l|}{} \\\midrule 
+\multicolumn{1}{|l}{Cloudiness}  & $cld$ & $0$ & $1$ & \multicolumn{1}{l|}{} \\ \bottomrule
+\end{tabular}
+\end{table}
+
+We apply the assumptions described in Table \ref{tab:assumptions} on the one-dimensional description of energy
+fluxes through Eqn. \ref{eqn:EB}. The derivation of the individual energy and mass balance terms for the IVOM
+and WEOM model versions are discussed in Paper III.
+
+\subsection{COSISTUPA: COSIPY based model with lower calibration requirements }
+
+In this section, we showcase a strategy to improve the AIR model's transferability to new locations.
+Specifically, in paper I, we highlight the sensitivity of the model to the surface layer thickness parameter.
+This parameter requires prior calibration for better model performance. However, the dependence of the model on
+this parameter can be removed if spatial temperature fluctuations across the ice structure are resolved.
+
+Here we combine the AIR model with the COupled Snowpack and Ice surface energy and mass balance model in PYthon
+(COSIPY) in order to remove the calibration requirements for model performance. COSIPY is typically used for
+modelling distributed snow and glacier mass changes \citep{sauterCOSIPYV1Opensource2020}. However, its flexible,
+user-friendly and modular framework makes it an ideal platform to implement the alternate modules required for
+modelling ice reservoirs. This modified COSIPY model will be referred to as COSISTUPA henceforth.
+
+\subsubsection{Model configuration}
+
+In this section, we describe all the adjustments to COSIPY modules necessary to convert it to the COSISTUPA
+model.
+
+The cosipy model input was extended to include discharge rate and cloudiness index measurements. Additionally,
+spray radius parameter was provided as input during model initialization. The model initialization of the ice
+dimensions were made identical to the AIR model. 
+
+Several parameterizations are available for estimating each of the surface processes in COSIPY. Most of the
+parameterizations used in the AIR model are among these options. But some parameterizations required minor
+modifications to be applicable for processes on a conical surface. Additionally, new parameterizations were
+required to estimate the conical shape evolution and model the freezing process due to the fountain discharge
+rate. To modify COSIPY into COSISTUPA, parametrizations of the following processes were modified:
+
+\begin{itemize}
+
+  \item Fountain rain heat flux : The heat flux generated due to the difference in fountain water droplet
+    temperature and surface temperature was introduced as a new energy balance component. This implementation is
+    identical to that described in Sec. \ref{sec:heatflux}
+
+  \item Turbulent flux scaling : The sensible and the latent heat fluxes were scaled by the $\mu_{cone}$ factor
+    introduced in Sec. \ref{sec:Qs}
+
+  \item Freezing process : Phase transition processes were introduced during time periods when the fountain
+    discharge was active. These processes created new ice layers whenever the energy balance allowed it
+    following the algorithm introduced in Sec. \ref{sec:phase}
+
+  \item Conical shape evolution : The surface mass balance estimation was converted to the volume estimation
+    through the methodology introduced in Sec. \ref{sec:shape}
+
+\end{itemize}
+
+Please note the above list of changes are not exhaustive and represent only the major modifications necessary to
+develop the COSISTUPA model.
+
+
+\subsubsection{Advantages}
+
+Execution time and multiprocessing workflow
+RMSE error
+User friendly and long-term maintenance
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=12cm]{Figures/model_compare.jpg}
+
+\caption{}
+
+\label{fig:Cosistupa}
+\end{figure}
+
+\section{Suggestions}
+
+\subsection{Model development}
 
 \subsection{Further Data acquisition}
 
-\subsubsection{Measurement of meltwater quantities}
+\subsubsection{Meltwater quantities}
 
-\subsubsection{Measurement of fountain characteristics}
+\subsubsection{Fountain characteristics}
 
 \subsubsection{Drone flight analysis}
 
