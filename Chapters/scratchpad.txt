@@ -6,9 +6,6 @@ worldwide.
 Physical models provide unbiased insight into the physical processes and the drivers of temporal and spatial
 changes.   
 
-The corresponding datasets were categorised based on the prefix of the country and the suffix of the winter
-season (eg. CH21 AIRs ). 
-
 its radius, area and volume using DEMs produced from drone flights. The fountain characteristics were calibrated
 from the observed radius and discharge rates. The model parameters were calibrated from some volume
 observations. The rest of this DEM dataset were used to validate the modelled volume evolution.  
