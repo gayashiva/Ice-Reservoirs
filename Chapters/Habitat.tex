@@ -11,42 +11,72 @@ strategies to judge the utility of AIRs in new locations.
 
 The water source of an AIR could be either a spring or a stream. Springs are the ideal water source since they
 are easy to transport via pipelines to the construction site due to their relatively warm temperatures. Other
-water sources have higher risks of pipeline freezing events.
+water sources have higher risks of freezing events in the fountain pipeline.
 
 \subsection{Weather conditions}
 
 AIRs prefer colder, drier and less-cloudy regions. Correspondingly, temperature, humidity and number of
 cloud-free days during the construction period can be used to rank different sites. 
 
-However, determining favourable construction locations is challenging due to the significant temporal, inter and
-intra regional variations in weather conditions.
+However, determining favourable construction locations is challenging due to the significant interannual,
+interregional and intraregional variations in weather conditions.
 
-\subsubsection{Interregional weather differences}
+\subsubsection{Interannual variability}
+
+We investigate the drivers of interannual variations of AIR volume evolution on the basis of CH20, CH21 and CH22
+datasets. Fig. \ref{fig:CH_diffs} (a) shows the correlation of the ice volume changes with median temperature
+during January for all the AIRs. Contrary to expectations, ice volume increases as median temperature increases.
+This indicates that temperature is not the primary driver of interannual variations in the ice volume. 
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=12cm]{Figures/2AIRs.jpg}
+\includegraphics[width=\textwidth]{Figures/CH_diffs.jpg}
+\caption{(a) Estimated volume change and median temperature and (b) Observed spray radius and median wind speed
+during january for AIRs built across three winters. } 
+\label{fig:CH_diffs}
+\end{figure}
+
+We hypothesize that higher wind speeds drove the volume differences of AIRs constructed in the Swiss location
+across three consecutive winters due to wind driven redistribution. The influence of this process on the spray
+radius managed to generate AIRs six times bigger in spite of temperatures being 3 $\degree C$ warmer (see Fig.
+\ref{fig:CH_diffs} (b)). 
+
+\begin{figure*}[t]
+\includegraphics[width=12 cm]{Figures/radf.png}
+\caption{Modelled spray radius using wind values from CH22 and CH21 experiments. Measured spray radius are
+indicated as dots.}
+\label{fig:wind}
+\end{figure*}
+
+To validate this hypothesis, we modelled the projectile motion of scheduled fountain water droplets with wind speed
+values taken from CH22 and CH21 experiments respectively. The details about the methodology used to do this is
+explained in paper II. Fig. \ref{fig:wind} shows the modelled spray radius produced using these
+two wind datasets and compares them with the measured spray radius values. As illustrated, wind speed drives the
+temporal variation in the spray radius. Moreover, the spray radius of the scheduled fountain with CH22 wind
+values is much higher than when using CH21 wind values. Therefore, the determination of the fountain spray
+radius cannot be performed using the characteristics of the fountain nozzle alone since it is significantly
+influenced due to the temporal variation of the wind speed.
+
+\subsubsection{Interregional variability}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=12cm]{Figures/IN21vsCH21.jpg}
 \caption{AIRs show significant variation in volume evolution depending on the choice of construction location.}
 \label{fig:2AIRs}
 \end{figure}
 
-\subsubsection{Intraregional weather differences}
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=12cm]{Figures/ISC_villages_Maria.png}
-\caption{Variation of AIR volume with altitude and weather.}
-\label{fig:altitudevsvolume}
-\end{figure}
+\subsubsection{Intraregional variability}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=12cm]{Figures/altitudevsvolume.png}
-\caption{Variation of AIR volume with altitude and weather.}
+\caption{(a) Estimated volume change and median temperature and (b) Observed spray radius and median wind speed
+during january for AIRs built across three winters. }
 \label{fig:altitudevsvolume}
 \end{figure}
 
-\subsubsection{Interannual weather differences}
+
 
 \subsection{Topography}
 

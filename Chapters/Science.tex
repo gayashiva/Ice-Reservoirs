@@ -14,24 +14,16 @@ discharge rates and identifying favourable construction locations worldwide.
 \subsection{Study sites}
 
 We chose two villages in the Swiss Alps and the Indian Himalayas called Guttannen and Gangles to collect the
-required datasets described above. These two locations exhibit drastically different ice volume evolution (see
-Fig. \ref{fig:2AIRs}) owing to their latitude, longitude and altitude differences. The corresponding datasets
-were categorised based on the construction strategy used, prefix of the country and the suffix of the winter
-season. The construction strategies are distinguished based on whether they used weather-sensitive approaches to
-regulate water supply. Those that did were codenamed automated construction strategy whereas the rest were
-codenamed traditional construction strategy. In total, five AIRs were studied in these two locations across
-three winters (see Table). Only one was built in Gangles. The rest were built in Guttannen. All except one
-construction campaign used traditional construction strategies. Therefore, traditional AIRs are referred to
-without explicitly specifying their construction strategy henceforth.
-
-\begin{figure}
-  \centering
-	\includegraphics[width=12 cm]{Figures/2AIRs.jpg}
-  \caption{The Swiss and Indian AIRs were 5 $m$ and 13 $m$ tall on January 9 and March 3, 2021 respectively. Picture
-credits: Daniel Bürki (left) and Thinles Norboo (right)} 
-\label{fig:2AIRs} 
-
-\end{figure}
+required datasets described above. The study period starts when the fountain was first switched on and ends when
+the respective AIR either melted or broke into several ice blocks. These two dates are denoted as start and
+expiry dates henceforth. Each AIR dataset was abbreviated based on the construction strategy used, prefix of the
+country code and the suffix of the year of its expiry date. The construction strategies are distinguished based
+on whether they used weather-sensitive approaches to regulate water supply. Those that did were codenamed
+automated construction strategy whereas the rest were codenamed traditional construction strategy. In total,
+five AIRs were studied in these two locations across three winters (see Table \ref{tab:AIRs}). Only one was
+built in Gangles. The rest were built in Guttannen. All except one construction campaign used traditional
+construction strategies. Therefore, traditional AIRs are referred to without explicitly specifying their
+construction strategy henceforth.
 
 The Guttannen site (46.66 $\degree$N, 8.29 $\degree$E) is situated in the Berne region, Switzerland and has an
 altitude of 1047 $m$ a.s.l. In the winter (Oct-Apr), mean daily minimum and maximum air temperatures vary
@@ -51,20 +43,25 @@ between July and September reaches 37.5 $mm$, the average winter precipitation b
 to 27.3 $ mm$ and falls almost entirely as snow. AIRs were constructed here as part of the Ice Stupa Competition
 by the Himalayan Institute of Alternatives, Ladakh (HIAL). 
 
+% \begin{figure}
+%   \centering
+% 	\includegraphics[width=12 cm]{Figures/2AIRs.jpg}
+%   \caption{The Swiss and Indian AIRs were 5 $m$ and 13 $m$ tall on January 9 and March 3, 2021 respectively. Picture
+% credits: Daniel Bürki (left) and Thinles Norboo (right)} 
+% \label{fig:2AIRs} 
+
+% \end{figure}
 
 \subsection{Meteorological data}
 
 Air temperature, relative humidity, wind speed, pressure, longwave and global shortwave radiation are required
-to calculate the surface energy balance of an AIR. The study period starts when the fountain was first switched
-on and ends when the respective AIR melted completely. These two dates are denoted as start and expiry dates
-henceforth. Each AIR is abbreviated based on the country code of the study site with the year of its expiry
-date. The resulting dataset highlights the difference in meteorological influences driving ice volume evolution
-in the two study sites (see Table \ref{tab:Observations}).
-
+to calculate the surface energy balance of an AIR.  The resulting dataset highlights the difference in
+meteorological influences driving ice volume evolution in the two study sites (see Table
+\ref{tab:Observations}).
 
 \begin{table}
   \centering
-  \caption{Summary of the weather observations for AIRs built during the 2020-21 winter season. 
+  \caption{Summary of the weather observations for AIRs built during the repective study period. 
 The weather measurements are shown using their mean ($\mu$) and standard deviation ($\sigma$) during the study
 period as $\mu \pm \sigma$. }
 
@@ -580,11 +577,11 @@ Specifically, in paper I, we highlight the sensitivity of the model to the surfa
 This parameter requires prior calibration for better model performance. However, the dependence of the model on
 this parameter can be removed if spatial temperature fluctuations across the ice structure are resolved.
 
-Here we combine the AIR model with the COupled Snowpack and Ice surface energy and mass balance model in PYthon
-(COSIPY) in order to remove the calibration requirements for model performance. COSIPY is typically used for
+In order to remove the calibration requirements for model performance, we combine the AIR model with the COupled
+Snowpack and Ice surface energy and mass balance model in PYthon (COSIPY) . COSIPY is typically used for
 modelling distributed snow and glacier mass changes \citep{sauterCOSIPYV1Opensource2020}. However, its flexible,
 user-friendly and modular framework makes it an ideal platform to implement the alternate modules required for
-modelling ice reservoirs. This modified COSIPY model will be referred to as COSISTUPA henceforth.
+modelling ice reservoirs. This modified COSIPY model will be referred to as COSISTUPA model henceforth.
 
 \subsubsection{Model configuration}
 
@@ -599,7 +596,7 @@ Several parameterizations are available for estimating each of the surface proce
 parameterizations used in the AIR model are among these options. But some parameterizations required minor
 modifications to be applicable for processes on a conical surface. Additionally, new parameterizations were
 required to estimate the conical shape evolution and model the freezing process due to the fountain discharge
-rate. To modify COSIPY into COSISTUPA, parametrizations of the following processes were modified:
+rate. To extend COSIPY into COSISTUPA, parametrizations of the following processes were modified:
 
 \begin{itemize}
 
@@ -622,8 +619,7 @@ rate. To modify COSIPY into COSISTUPA, parametrizations of the following process
 Please note the above list of changes are not exhaustive and represent only the major modifications necessary to
 develop the COSISTUPA model.
 
-
-\subsubsection{Advantages}
+\subsubsection{Model intercomparison}
 
 Execution time and multiprocessing workflow
 RMSE error
@@ -640,21 +636,40 @@ User friendly and long-term maintenance
 
 \section{Suggestions}
 
-\subsection{Model development}
+\subsection{Model limitations}
 
-\subsection{Further Data acquisition}
+\subsection{Spray radius}
+
+\subsection{Further data acquisition}
 
 \subsubsection{Meltwater quantities}
 
+The model validation set can be extended if daily AIR meltwater is measured. This dataset could serve as a
+superior way to validate the model compared to the drone surveys which are also used for determining the spray
+radius. However, the study site needs to satisfy two condintions in order to do this. First, the terrain of the
+site needs to be waterproof and oriented so that most of the AIR runoff can be collected. Second, the chosen
+location should not have high wind speeds, otherwise a significant fraction of AIR wastewater would be dispersed
+in the air.
+
 \subsubsection{Fountain characteristics}
 
+Fountain pressure
+
 \subsubsection{Drone flight analysis}
+
+Identification of AIR boundary is subjective.
 
 \subsection{Improvement of model algorithm}
 
 \subsubsection{Initialisation of model}
 
 \subsubsection{Better model parametrisations}
+
+For turbulent fluxes
+
+For other shapes/ shape evolution
+
+Albedo variation due to fountain
 
 
 
